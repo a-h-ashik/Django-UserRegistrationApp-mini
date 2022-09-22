@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'user_registration/css/style.css' %}">
+  <title>Registration</title>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <p class="tittle">Register</p>
+    </div>
+    <div class="content">
+      <form action="" method="post" novalidate>
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+
+        {% for field in form %}
+          <p class="label">
+            {{ field.label_tag }}
+          </p>
+          <p class="field">
+            {{field}}
+            {{field.errors}}
+          </p>
+        {% endfor %}
+
+        <input class="button" type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+</body>
+</html>

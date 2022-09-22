@@ -1,0 +1,82 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: rgb(235, 235, 235);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  min-width: 300px;
+  max-width: 480px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.header{
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: rgb(60, 235, 60);
+}
+
+.content{
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.content > form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form > .label{
+  width: 100%;
+  padding: 0.15rem;
+}
+
+form > .field{
+  width: 100%;
+  padding: 0.15rem 0 0 0;
+}
+
+form > .field > input{
+  width: 100%;
+}
+
+form > .button{
+  width: 98.31%;
+  margin: 0.5rem 0;
+  padding: 0.3rem;
+  border: none;
+  border-radius: 5px;
+  color: rgb(245, 245, 245);
+  background-color: rgb(106, 220, 106);
+}
+
+.errorlist{
+  width: 100%;
+  font-size: 0.5rem;
+  text-align: right;
+  list-style-type: none;
+  color: red;
+}
+
+.nonfield{
+  text-align: center;
+}
